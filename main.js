@@ -6,7 +6,8 @@ song=""
 function setup(){
 canvas = createCanvas(400, 500)
 canvas.position(475, 125)
-video = createCapture(0,0)
+video = createCapture(VIDEO)
+video.size(400,500)
 video.hide()
  posenet=ml5.poseNet(video,modelloaded)
  posenet.on("pose",gotposes)
